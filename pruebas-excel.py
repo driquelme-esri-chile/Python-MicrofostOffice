@@ -12,6 +12,10 @@ from openpyxl.styles import PatternFill,Border,Side
 
 
 
+
+nombre_salida: str = datetime.datetime.today().strftime('%Y-%m-%d  %H,%M,%S')
+
+
 Analisis = ["lala","lele","lili","lolo","lulu","loli"]
 Nombre = ["rala","lrje","dooli","jilo","lupuuu","lueli"]
 Te = ["malm","meme","cicc","fod","ruu","boois"]
@@ -31,11 +35,11 @@ df = pd.DataFrame({
     'Rol': Rol
 })
 
-
+print(df)
 
 book = load_workbook('templates/templates_ads.xlsx')
 
-outputFileExcel: str = jobsDir + "\\" + 'Analisis de Sobreposicion {}.xlsx'.format(nombre_salida)
+outputFileExcel: str = 'prueba {}.xlsx'.format(nombre_salida)
 
 writer = pd.ExcelWriter(outputFileExcel,  engine='openpyxl') 
 
@@ -80,4 +84,3 @@ for cell in sheet["K"]:
 
 
 writer.save()
-arcpy.SetParameterAsText(1, writer)
