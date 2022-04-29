@@ -5,21 +5,10 @@ from asyncore import write
 import datetime
 import pandas as pd
 import locale
-
-
-############################################
-############################################
-############################################
-
 import tkinter
 from tkinter import messagebox
-
-
-
-############################################
-############################################
-############################################
-
+from tkinter import *
+from tkinter import ttk
 from docxtpl import DocxTemplate
 from itertools import groupby
 from operator import itemgetter
@@ -36,6 +25,9 @@ from openpyxl.styles import PatternFill,Border,Side
 
 
 # This code is to hide the main tkinter window
+#win= Tk()
+
+#win.geometry("750x200")
 root = tkinter.Tk()
 root.withdraw()
 
@@ -43,6 +35,7 @@ root.withdraw()
 messagebox.showinfo("Title", "Message")
 
 
+#addin .net c# 
 
 
 
